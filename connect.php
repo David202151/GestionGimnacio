@@ -1,0 +1,44 @@
+<?php
+ $name=$_POST['name'];
+ $email=$_POST['email'];
+ $password=$_POST['password'];
+ if(!empty($name)){
+   if(!empty($email)){
+      if(!empty($password)){
+         $host="localhost";
+         $dbusername="root";
+         $dbpassword=""; 
+         $dbname="gym";
+
+         $conn=new mysqli($host,$dbusername,$dbpassword,$dbname);
+         if(mysqli_connect_error()){
+            die('Error de conexión ('.mysqli_connect_errno().') '.mysqli_connect_error());
+
+         }
+         else{
+            $sql="INSERT INTO register (name, email,password) values('$name','$email','$password')";
+            if($conn->query($sql)){
+               header('location:login.php');
+               echo"Nuevo registro insertado con éxito";
+            }
+            else{
+               echo "Error: " .$sql . "<br>" .$conn->error;
+            }
+            $conn->close();
+         }   
+      }
+      else{
+         echo "La contraseña no debe estar vacía";
+         die();
+      }
+   }
+   else{
+      echo "El correo electrónico no debe estar vacío";
+      die();
+   } 
+ }
+ else{
+   echo "El nombre no debe estar vacío";
+   die();
+}
+?>
