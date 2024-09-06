@@ -27,9 +27,9 @@
                     <div class="input-box">
                         <label class="control-label">Género:</label>
                         <select name="gender" required="required" id="select">
-                            <option value="Male" selected="selected">Masculino</option>
-                            <option value="Female">Femenino</option>
-                            <option value="Other">Otro</option>
+                            <option value="Masculino" selected="selected">Masculino</option>
+                            <option value="Femenino">Femenino</option>
+                            <option value="Otro">Otro</option>
                         </select>
                     </div>
                     <div class="input-box">
@@ -39,7 +39,7 @@
                     </div>
                     <div class="input-box">
                         <label class="control-label">Planes:</label>
-                        <select name="plan" required="required" id="select">
+                        <select name="plan" required="required" id="planSelect" onchange="actualizarMontoTotal()">
                             <option value="1" selected="selected">Un Mes</option>
                             <option value="3">Tres Meses</option>
                             <option value="6">Seis Meses</option>
@@ -47,7 +47,6 @@
                         </select>
                     </div>
                 </div>
-
 
                 <div class="col">
                     <h4>Detalles de Contacto</h4>
@@ -79,13 +78,37 @@
                                 Yoga</label>
                         </div>
                      </div>
-                    <div class="input-box">
-                        <label class="control-label">Monto Total</label>
-                        <div class="input-append">
-                            <span class="add-on"></span>
-                            <input type="number" placeholder="50" name="amount" class="span11" required/>
+                     
+                    
+
+                    <div class="row discount-total-row">
+                        <div class="col">
+                            <div class="input-box">
+                                <label class="control-label">Descuento:</label>
+                                
+                                <select name="discout" required="required" id="select">
+                                    <option value="0.05" selected="selected">5%</option>
+                                    <option value="0.25">25%</option>
+                                    <option value="0.50">50%</option>
+                                </select>
+
+                                 
+                            </div>
                         </div>
+                        <div class="col">
+                            <div class="input-box">
+                                <label class="control-label">Monto Total</label>
+                                <div class="input-append">
+                                    
+                                    <input type="number" placeholder="50" id="montoTotal" name="amount" class="span11" required/>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
                     </div>
+
+                    
                 </div>
             </div>
             <div>
@@ -128,25 +151,47 @@
         ?>
     </div>
     <script type="text/javascript">
-  // Esta función se llama desde los menús emergentes para transferir a
-  // una página diferente. Ignorar si el valor devuelto es una cadena nula:
+
+    function actualizarMontoTotal() {
+                var planSelect = document.getElementById('planSelect');
+                var montoTotal = document.getElementById('montoTotal');
+                
+                var planSeleccionado = planSelect.value; 
+                var total = 0;
+
+                
+                if (planSeleccionado == '1') {
+                    total = 50; 
+                } else if (planSeleccionado == '3') {
+                    total = 150; 
+                } else if (planSeleccionado == '6') {
+                    total = 300; 
+                } else if (planSeleccionado == '12') {
+                    total = 600; 
+                }
+
+                
+                montoTotal.value = total;
+    }
+
+  //  transferir a una página diferente. 
   function goPage (newURL) {
 
       // si la URL está vacía, omite los divisores del menú y restablece la selección del menú al valor predeterminado
       if (newURL != "") {
       
-          // si la URL es "-", es esta página -- restablece el menú:
+          
           if (newURL == "-" ) {
               resetMenu();            
           } 
-          // de lo contrario, envía la página a la URL designada            
+          // envía la página a la URL designada            
           else {  
             document.location.href = newURL;
           }
       }
   }
 
-// restablece la selección del menú al ingresar a esta página:
+// restablece la selección del menú al ingresar la página:
 function resetMenu() {
    document.gomenu.selector.selectedIndex = 2;
 }

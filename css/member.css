@@ -208,3 +208,27 @@ span{
   left: 290px;
   width: calc(100% - 290px);
 }
+
+.discount-total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Ensure both are vertically centered */
+  gap: 20px; /* Adjust spacing between the fields */
+}
+
+.discount-total-row .col {
+  flex: 1;
+}
+
+.discount-total-row .col .input-box select,
+.discount-total-row .col .input-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.discount-total-row .col .input-box label {
+  display: block;
+  margin-bottom: 5px;
+}
