@@ -21,7 +21,7 @@
 
 <header class="header">
 
-    <a href="#" class="logo"> <span>BE</span>FIT</a>
+    <a href="#" class="logo"> <span>FITNES</span>STUDIO</a>
 
     <div id="menu-btn" class="fas fa-bars"></div>
 
@@ -30,8 +30,7 @@
         <a href="#about">Sobre nosotros</a>
         <a href="#features">Características</a>
         <a href="#pricing">Precios</a>
-        <a href="#trainers">Entrenadores</a>
-        <a href="#blogs">Blogs</a>
+        <a href="#trainers">Personal</a>
         <a href="login.php" class="btn1">Iniciar sesión</a>
     </nav>
 
@@ -92,23 +91,19 @@
     <div class="content">
         <span>sobre nosotros</span>
         <h3 class="title">Cada día es una oportunidad para mejorar</h3>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione quia accusamus dicta inventore nobis obcaecati vero odio, id dolorum. Consequatur ex, aperiam deserunt nostrum perferendis illum unde ipsa? Consequatur, distinctio?</p>
+        <p> Nuestra misión es simple: ayudarte a alcanzar tu mejor versión. Ofrecemos una amplia variedad de clases y entrenamientos personalizados, diseñados por nuestros entrenadores certificados, que no solo se enfocan en la fuerza física, sino también en la mejora continua de tus capacidades y tu bienestar integral.</p>
         <div class="box-container">
             <div class="box">
                 <h3><i class="fas fa-check"></i>cuerpo y mente</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, enim.</p>
             </div>
             <div class="box">
                 <h3><i class="fas fa-check"></i>vida saludable</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, enim.</p>
             </div>
             <div class="box">
                 <h3><i class="fas fa-check"></i>estrategias</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, enim.</p>
             </div>
             <div class="box">
                 <h3><i class="fas fa-check"></i>ejercicio</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, enim.</p>
             </div>
         </div>
         <!-- <a href="#" class="btn">leer más</a> -->
@@ -133,8 +128,6 @@
             <div class="content">
                 <img src="images/icon-1.png" alt="">
                 <h3>culturismo</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, atque.</p>
-                <!-- <a href="#" class="btn">leer más</a> -->
             </div>
         </div>
 
@@ -145,8 +138,6 @@
             <div class="content">
                 <img src="images/icon-2.png" alt="">
                 <h3>gimnasio para hombres</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, atque.</p>
-                <!-- <a href="#" class="btn">leer más</a> -->
             </div>
         </div>
 
@@ -157,8 +148,6 @@
             <div class="content">
                 <img src="images/icon-3.png" alt="">
                 <h3>gimnasio para mujeres</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, atque.</p>
-                <!-- <a href="#" class="btn">leer más</a> -->
             </div>
         </div>
 
@@ -174,39 +163,38 @@
 
     <div class="information">
         <span>plan de precios</span>
-        <h3>plan de precios accesible para ti</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam dolore excepturi ea suscipit fugiat cum quae, rerum optio mollitia! Tempora?</p>
-        <p> <i class="fas fa-check"></i> ejercicio cardiovascular </p>
-        <p> <i class="fas fa-check"></i> levantamiento de pesas </p>
-        <p> <i class="fas fa-check"></i> planes de dieta </p>
-        <p> <i class="fas fa-check"></i> resultados completos </p>
-        <a href="#" class="btn">ver precios</a>
+        <div class="plan basic">
+            <h3>plan básico</h3>
+            <div class="price"><span></span>30<span>/mes</span></div>
+            <div class="list">
+                <p> <i class="fas fa-check"></i> Acceso ilimitado al gimnasio </p>
+                <p> <i class="fas fa-check"></i> Horario libre </p>
+            </div>
+        </div>
     </div>
 
-    <div class="plan basic">
-        <h3>plan básico</h3>
-        <div class="price"><span></span>2000<span>/mes</span></div>
-        <div class="list">
-            <p> <i class="fas fa-check"></i> entrenamiento personal </p>
-            <p> <i class="fas fa-check"></i> ejercicio cardiovascular </p>
-            <p> <i class="fas fa-check"></i> levantamiento de pesas </p>
-            <p> <i class="fas fa-check"></i> planes de dieta </p>
-            <p> <i class="fas fa-check"></i> resultados completos </p>
-        </div>
-        <!-- <a href="#" class="btn">comenzar</a> -->
-    </div>
+    
 
     <div class="plan">
         <h3>plan premium</h3>
-        <div class="price"><span></span>4000<span>/mes</span></div>
+        <div class="price"><span></span>60<span>/mes</span></div>
         <div class="list">
-            <p> <i class="fas fa-check"></i> entrenamiento personal </p>
-            <p> <i class="fas fa-check"></i> ejercicio cardiovascular </p>
-            <p> <i class="fas fa-check"></i> levantamiento de pesas </p>
-            <p> <i class="fas fa-check"></i> planes de dieta </p>
-            <p> <i class="fas fa-check"></i> resultados completos </p>
+            <p> <i class="fas fa-check"></i> Acceso ilimitado al gimnasio </p>
+            <p> <i class="fas fa-check"></i> Clases grupales incluidas (Yoga, Spinning, HIIT) </p>
+            <p> <i class="fas fa-check"></i> 1 sesión de entrenamiento personal al mes </p>
         </div>
-        <!-- <a href="#" class="btn">comenzar</a> -->
+    </div>
+
+    <div class="plan">
+        <h3>plan vip</h3>
+        <div class="price"><span></span>90<span>/mes</span></div>
+        <div class="list">
+            <p> <i class="fas fa-check"></i> Acceso ilimitado al gimnasio </p>
+            <p> <i class="fas fa-check"></i> Clases grupales incluidas </p>
+            <p> <i class="fas fa-check"></i> Entrenamiento personal ilimitado </p>
+            <p> <i class="fas fa-check"></i> Acceso a zona exclusiva de recuperación (sauna y spa) </p>
+            <p> <i class="fas fa-check"></i> resultados completos y guias con expertos </p>
+        </div>
     </div>
 
 </section>
@@ -225,11 +213,10 @@
             <img src="images/trainer-1.jpg" alt="">
             <div class="content">
                 <span>entrenador experto</span>
-                <h3>john deo</h3>
+                <h3>Alex García</h3>
                 <div class="share">
                     <a href="#" class="fab fa-facebook-f"></a>
                     <a href="#" class="fab fa-twitter"></a>
-                    <a href="#" class="fab fa-pinterest"></a>
                     <a href="#" class="fab fa-linkedin"></a>
                 </div>
             </div>
@@ -239,11 +226,10 @@
             <img src="images/trainer-2.jpg" alt="">
             <div class="content">
                 <span>entrenador experto</span>
-                <h3>john deo</h3>
+                <h3>Carla Sánchez</h3>
                 <div class="share">
                     <a href="#" class="fab fa-facebook-f"></a>
                     <a href="#" class="fab fa-twitter"></a>
-                    <a href="#" class="fab fa-pinterest"></a>
                     <a href="#" class="fab fa-linkedin"></a>
                 </div>
             </div>
@@ -253,11 +239,10 @@
             <img src="images/trainer-3.jpg" alt="">
             <div class="content">
                 <span>entrenador experto</span>
-                <h3>john deo</h3>
+                <h3>Luis Fernández</h3>
                 <div class="share">
                     <a href="#" class="fab fa-facebook-f"></a>
                     <a href="#" class="fab fa-twitter"></a>
-                    <a href="#" class="fab fa-pinterest"></a>
                     <a href="#" class="fab fa-linkedin"></a>
                 </div>
             </div>
@@ -267,11 +252,10 @@
             <img src="images/trainer-4.jpg" alt="">
             <div class="content">
                 <span>entrenador experto</span>
-                <h3>john deo</h3>
+                <h3>Sofía Torres</h3>
                 <div class="share">
                     <a href="#" class="fab fa-facebook-f"></a>
                     <a href="#" class="fab fa-twitter"></a>
-                    <a href="#" class="fab fa-pinterest"></a>
                     <a href="#" class="fab fa-linkedin"></a>
                 </div>
             </div>
@@ -289,163 +273,12 @@
 
     <span>únete a nosotros ahora</span>
     <h3>obtén hasta un 50% de descuento</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat architecto nesciunt aut sapiente quis inventore quam vitae quod illum incidunt.</p>
+    <p> No estás entrenando para un objetivo, estás entrenando para una vida mejor.</p>
     <a href="#" class="btn">obtener descuento</a>
 
 </section>
 
 <!-- sección banner termina -->
-
-<!-- sección testimonios comienza  -->
-
-<section class="review">
-
-    <div class="information">
-        <span>testimonios</span>
-        <h3>lo que dicen nuestros clientes</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis voluptas praesentium asperiores fugiat, excepturi odit obcaecati a voluptatibus earum quisquam?</p>
-        <!-- <a href="#" class="btn">leer más</a> -->
-    </div>
-
-    <div class="swiper review-slider">
-
-        <div class="swiper-wrapper">
-
-            <div class="swiper-slide slide">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, quo.</p>
-                <div class="user">
-                    <img src="images/pic-1.png" alt="">
-                    <div class="info">
-                        <h3>john deo</h3>
-                        <span>diseñador</span>
-                    </div>
-                    <i class="fas fa-quote-left"></i>
-                </div>
-            </div>
-
-            <div class="swiper-slide slide">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, quo.</p>
-                <div class="user">
-                    <img src="images/pic-2.png" alt="">
-                    <div class="info">
-                        <h3>john deo</h3>
-                        <span>diseñador</span>
-                    </div>
-                    <i class="fas fa-quote-left"></i>
-                </div>
-            </div>
-
-            <div class="swiper-slide slide">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, quo.</p>
-                <div class="user">
-                    <img src="images/pic-3.png" alt="">
-                    <div class="info">
-                        <h3>john deo</h3>
-                        <span>diseñador</span>
-                    </div>
-                    <i class="fas fa-quote-left"></i>
-                </div>
-            </div>
-
-            <div class="swiper-slide slide">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, quo.</p>
-                <div class="user">
-                    <img src="images/pic-4.png" alt="">
-                    <div class="info">
-                        <h3>john deo</h3>
-                        <span>diseñador</span>
-                    </div>
-                    <i class="fas fa-quote-left"></i>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- sección testimonios termina -->
-
-<!-- sección blogs comienza  -->
-
-<section class="blogs" id="blogs">
-
-    <h1 class="heading"> <span>publicaciones diarias</span> </h1>
-
-    <div class="swiper blogs-slider">
-
-        <div class="swiper-wrapper">
-
-            <div class="swiper-slide slide">
-                <div class="image">
-                    <img src="images/blog-1.jpg" alt="">
-                </div>
-                <div class="content">
-                    <div class="link"> <a href="#">por usuario</a> <span>|</span> <a href="#">21 de mayo, 2021</a> </div>
-                    <h3>El fitness no se trata de ser mejor que alguien más</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, tenetur?</p>
-                    <!-- <a href="#" class="btn">leer más</a> -->
-                </div>
-            </div>
-            
-            <div class="swiper-slide slide">
-                <div class="image">
-                    <img src="images/blog-2.jpg" alt="">
-                </div>
-                <div class="content">
-                    <div class="link"> <a href="#">por usuario</a> <span>|</span> <a href="#">21 de mayo, 2021</a> </div>
-                    <h3>El fitness no se trata de ser mejor que alguien más</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, tenetur?</p>
-                    <!-- <a href="#" class="btn">leer más</a> -->
-                </div>
-            </div>
-
-            <div class="swiper-slide slide">
-                <div class="image">
-                    <img src="images/blog-3.jpg" alt="">
-                </div>
-                <div class="content">
-                    <div class="link"> <a href="#">por usuario</a> <span>|</span> <a href="#">21 de mayo, 2021</a> </div>
-                    <h3>El fitness no se trata de ser mejor que alguien más</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, tenetur?</p>
-                    <!-- <a href="#" class="btn">leer más</a> -->
-                </div>
-            </div>
-
-            <div class="swiper-slide slide">
-                <div class="image">
-                    <img src="images/blog-4.jpg" alt="">
-                </div>
-                <div class="content">
-                    <div class="link"> <a href="#">por usuario</a> <span>|</span> <a href="#">21 de mayo, 2021</a> </div>
-                    <h3>El fitness no se trata de ser mejor que alguien más</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, tenetur?</p>
-                    <!-- <a href="#" class="btn">leer más</a> -->
-                </div>
-            </div>
-
-            <div class="swiper-slide slide">
-                <div class="image">
-                    <img src="images/blog-5.jpg" alt="">
-                </div>
-                <div class="content">
-                    <div class="link"> <a href="#">por usuario</a> <span>|</span> <a href="#">21 de mayo, 2021</a> </div>
-                    <h3>El fitness no se trata de ser mejor que alguien más</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, tenetur?</p>
-                    <!-- <a href="#" class="btn">leer más</a> -->
-                </div>
-            </div>
-
-        </div>
-
-        <div class="swiper-pagination"></div>
-
-    </div>
-
-</section>
-
-<!-- sección blogs termina -->
 
 <!-- sección pie de página comienza  -->
 
@@ -459,7 +292,7 @@
             <a class="links" href="#about">Sobre nosotros</a>
             <a class="links" href="#features">Características</a>
             <a class="links" href="#pricing">Precios</a>
-            <a class="links" href="#trainers">Entrenadores</a>
+            <a class="links" href="#trainers">Personal</a>
             <a class="links" href="#blogs">Blogs</a>
         </div>
 
@@ -476,14 +309,12 @@
         <div class="box">
             <h3>contacto</h3>
             <p> <i class="fas fa-phone"></i> +123-456-7890 </p>
-            <p> <i class="fas fa-phone"></i> +111-222-3333 </p>
-            <p> <i class="fas fa-envelope"></i> krishnakumar29021@gmail.com </p>
-            <p> <i class="fas fa-map"></i> karnataka, india - 560035 </p>
+            <p> <i class="fas fa-envelope"></i> gym5@gmail.com </p>
+            <p> <i class="fas fa-map"></i> LATACUNGA, Ecuador  </p>
             <div class="share">
                 <a href="#" class="fab fa-facebook-f"></a>
                 <a href="#" class="fab fa-twitter"></a>
                 <a href="#" class="fab fa-linkedin"></a>
-                <a href="#" class="fab fa-pinterest"></a>
             </div>
         </div>
 
@@ -491,7 +322,7 @@
 
 </section>
 
-<div class="credit"> creado por <span>mr. Krishna</span> | todos los derechos reservados! </div>
+<div class="credit"> Creado por <span>Grupo Vargas-Chimborazo-Quillupangui</span> | todos los derechos reservados! </div>
 
 <!-- sección pie de página termina -->
 
