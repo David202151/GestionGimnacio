@@ -86,8 +86,9 @@
                             <div class="input-box">
                                 <label class="control-label">Descuento:</label>
                                 
-                                <select name="discout" required="required" id="select">
-                                    <option value="0.05" selected="selected">5%</option>
+                                <select name="discout" required="required" id="select" onchange="actualizarMontoTotal()">
+                                    <option value="0.00" selected="selected">Ninguno</option>
+                                    <option value="0.05">5%</option>
                                     <option value="0.25">25%</option>
                                     <option value="0.50">50%</option>
                                 </select>
@@ -98,10 +99,8 @@
                         <div class="col">
                             <div class="input-box">
                                 <label class="control-label">Monto Total</label>
-                                <div class="input-append">
-                                    
-                                    <input type="number" placeholder="50" id="montoTotal" name="amount" class="span11" required/>
-                                </div>
+                                <input type="number" placeholder="50" id="montoTotal" name="amount" class="span11" step="0.01" required/>
+                                <span id="montoInicial" style="color: red; text-decoration: line-through;"></span>
                             </div>
                         </div>
                         
@@ -125,7 +124,8 @@
             $contact=$_POST["contact"];
             $address=$_POST["address"];
             $services=$_POST["services"];
-            $amount=$_POST["amount"];
+            $amount = $_POST["amount"];
+
             $host="localhost";
             $dbusername="root";
             $dbpassword="";
@@ -137,7 +137,7 @@
                 die('Error de conexión ('.mysqli_connect_errno().')'.mysqli_connect_error());
             }
             else{
-                $sql="INSERT INTO member(fullname,gender,dor,plan,contact,address,services,amount) values('$fullname','$gender','$dor','$plan','$contact','$address','$services','$amount')";
+                $sql = "INSERT INTO member(fullname, gender, dor, plan, contact, address, services, amount) VALUES('$fullname', '$gender', '$dor', '$plan', '$contact', '$address', '$services', '$amount')";
                 if ($conn->query($sql)) {
                     // echo"INSERTADO";
                     // header('location:../dmem.php');
@@ -153,25 +153,39 @@
     <script type="text/javascript">
 
     function actualizarMontoTotal() {
-                var planSelect = document.getElementById('planSelect');
-                var montoTotal = document.getElementById('montoTotal');
-                
-                var planSeleccionado = planSelect.value; 
-                var total = 0;
+        var planSelect = document.getElementById('planSelect');
+        var descuentoSelect = document.querySelector('select[name="discout"]');
+        var montoTotal = document.getElementById('montoTotal');
+        var montoInicial = document.getElementById('montoInicial');
+        
+        var planSeleccionado = planSelect.value; 
+        var descuentoSeleccionado = descuentoSelect.value; 
+        var total = 0;
 
-                
-                if (planSeleccionado == '1') {
-                    total = 50; 
-                } else if (planSeleccionado == '3') {
-                    total = 150; 
-                } else if (planSeleccionado == '6') {
-                    total = 300; 
-                } else if (planSeleccionado == '12') {
-                    total = 600; 
-                }
+        //  precios según el plan
+        if (planSeleccionado == '1') {
+            total = 50; 
+        } else if (planSeleccionado == '3') {
+            total = 150; 
+        } else if (planSeleccionado == '6') {
+            total = 300; 
+        } else if (planSeleccionado == '12') {
+            total = 500; 
+        }
 
-                
-                montoTotal.value = total;
+        
+        if (descuentoSeleccionado == '0.00' || descuentoSeleccionado == '0') {
+            montoInicial.style.display = 'none'; 
+        } else {
+            montoInicial.style.display = 'inline'; 
+            montoInicial.innerText = total.toFixed(2) + " USD";  // dos decimales
+        }
+
+        // Aplicar el descuento
+        var totalConDescuento = total - (total * descuentoSeleccionado);
+        
+        
+        montoTotal.value = totalConDescuento.toFixed(2);
     }
 
   //  transferir a una página diferente. 
